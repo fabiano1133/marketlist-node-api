@@ -7,8 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsx watch src/server.ts",
     "lint": "eslint src --ext .ts --fix",
-    "knex": "node --no-warnings tsx ./node_modules/.bin/knex",
-    "build": "tsup src --out-dir build"
+    "knex": "node --no-warnings --loader tsx ./node_modules/.bin/knex",
+    "build": "tsup src --out-dir build",
+    "start:prod": "node build/server.js"
   },
   "keywords": [],
   "author": "",
